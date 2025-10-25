@@ -1,0 +1,225 @@
+/* BODY & GENERAL STYLING */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  animation: fadeIn 1s ease;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #e0e0e0;
+}
+
+/* CONTROLS */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+input[type="file"] {
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #facc15;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+input[type="file"]:hover {
+  background: #fbbf24;
+}
+
+/* BUTTONS */
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+button.record { background-color: #facc15; color: #000; }
+button.record:hover { background-color: #fbbf24; }
+
+button.stop { background-color: #f87171; color: #fff; }
+button.stop:hover { background-color: #f87171; opacity: 0.85; }
+
+button.upload { background-color: #4ade80; color: #000; }
+button.upload:hover { background-color: #22c55e; color: #fff; }
+
+/* TEXTAREA CONTAINER */
+.textarea-container {
+  margin-top: 25px;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.2);
+}
+
+.textarea-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.copy-btn {
+  background-color: #38bdf8;
+  color: #000;
+  padding: 6px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.copy-btn:hover {
+  background-color: #0ea5e9;
+  color: #fff;
+}
+
+textarea {
+  width: 100%;
+  height: 180px;
+  border-radius: 15px;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  resize: vertical;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+/* METRICS CONTAINER */
+.metrics-container {
+  margin-top: 35px;
+  padding: 25px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* FADE-IN ANIMATION */
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button, input[type="file"] {
+    width: 80%;
+    justify-content: center;
+  }
+}
+/* REFERENCE TEXT INPUT */
+.reference-input {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.reference-input input {
+  width: 100%;
+  max-width: 700px;
+  padding: 18px 20px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-weight: 500;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.reference-input input::placeholder {
+  color: #d1d5db;
+}
+
+.reference-input input:focus {
+  background: rgba(255,255,255,0.25);
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.5);
+  transform: scale(1.02);
+}
+
+/* CHOOSE FILE BUTTON STYLING */
+input[type="file"] {
+  padding: 14px 24px;
+  border-radius: 15px;
+  background: #facc15;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.05rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+input[type="file"]:hover {
+  background: #fbbf24;
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* RESPONSIVE UPDATE */
+@media (max-width: 600px) {
+  .reference-input input {
+    width: 90%;
+  }
+
+  input[type="file"] {
+    width: 90%;
+  }
+}
+
